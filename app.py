@@ -25,7 +25,6 @@ COOKIES_PATH = "/tmp"
 
 # 配置区
 
-
 class HeathSign(object):
 
 	def __init__(self):
