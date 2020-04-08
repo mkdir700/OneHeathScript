@@ -3,7 +3,7 @@ import json
 import requests
 
 
-# 配置区
+# ===== 配置区 =====
 
 # server酱
 SERVER_CHAN_SCKEY = 'xxxxxxxx'
@@ -18,12 +18,11 @@ TENCENT_FILE_URL = 'xxxxxx' # 腾讯云文档的公开分享链接
 
 # API 用于更新cookies 以及 手动打卡
 TENTCENT_CLOUD_FUNC_REMOTE_URL = ""
-# https://xxxxxxx.com/test/health?update=True
 
 # cookies缓存文件路径
 COOKIES_PATH = "/tmp"
 
-# 配置区
+# ===== 配置区 =====
 
 class HeathSign(object):
 
