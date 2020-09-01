@@ -88,6 +88,14 @@ class HeathSign(object):
             lastHealthReport.pop(field)
         lastHealthReport["description"] = ""
         lastHealthReport["at_home"] = True
+        lastHealthReport['custom'] = {
+            "zufrc": [
+                "\u5426"
+            ],
+            "mnfyo": [
+                "\u5426"
+            ]
+        }
         # 数据整理
         self.last_report_msg = {"address": address}
         self.last_report_msg.update(lastHealthReport)
@@ -95,7 +103,6 @@ class HeathSign(object):
     def daily_reports(self):
         """每日信息上报"""
         # print(self.latestReport)
-        # x = self.session.get('https://www.ioteams.com/ncov/api/users/last-report', headers = self.headers)
         url = 'https://www.ioteams.com/ncov/api/users/dailyReport'
         r = self.session.post(
             url, headers=self.headers, data=json.dumps(
